@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+h1 {
+    text-align: center;
+}
+
+.bubble {    
+    margin-right: auto;
+    background: #a3d0eb;
+    color: #272222;
+    font-size: 14px;
+    text-align: left;
+    min-width: 100px;
+    max-width: 350px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.bubble:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-width: 20px 0 0 20px;
+    border-color: transparent transparent transparent #a3d0eb;
+    top: 85%;
+    right: -16px;
+    margin-top: -10px;
+}
+
+.chat-input {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    justify-content: center;
+    background-color: green;
+    z-index: 10;
+}
+
+#user-input {
+    height: 35px;
+    max-width: 80%;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 14px;
+    resize: none;
+}
+
+.textarea {
+    display: block;
+    min-width: 500px;
+    overflow: hidden;
+    resize: both;
+    height: 40px;
+    line-height: 20px;
+    border: 1px #ccc solid;
+    font-size: 14px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+    width: 20px;
+}
+
+.icon {
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+}
+
+.cat {
+    height: 400px;
+    object-fit: contain;
+}
