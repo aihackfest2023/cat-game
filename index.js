@@ -30,26 +30,26 @@ async function sendMessage() {
         var catImg = document.querySelector(".cat");
         switch (emotion) {
             case "joy":
-                catImg.src = "Assets/happycat1.png";
+                catImg.src = "Assets/gingercatjoy.gif";
                 break;
             case "sadness":
-                catImg.src = "Assets/catsadcry.png";
+                catImg.src = "Assets/gingercatsad.gif";
                 break;
             case "fear":
-                catImg.src = "Assets/catfear.png";
+                catImg.src = "Assets/gingercatscared.gif";
                 break;
             case "anger":
-                catImg.src = "Assets/catangry.png";
+                catImg.src = "Assets/gingercatanger.gif";
                 break;
             case "disgust":
-                catImg.src = "Assets/catjudge.png";
+                catImg.src = "Assets/gingercatjudge.gif";
                 break;
             case "surprise":
-                catImg.src = "Assets/catsurprised.png";
+                catImg.src = "Assets/gingercatsurprised.gif";
                 break;
             case "confusion":
             default:
-                catImg.src = "Assets/catconfused.png";
+                catImg.src = "Assets/gingercatconfused.gif";
                 break;
         }
     }
@@ -87,5 +87,13 @@ async function queryGPT(userMessage) {
 window.onload = () => {
     document.querySelector("#send-button").addEventListener("click", async () => {
         await sendMessage();
+    });
+
+    document.querySelector("#piano").addEventListener("click", () => {
+        location.href = "piano.html";
+    });
+
+    document.querySelector("#chopsticks").addEventListener("click", () => {
+        location.href = "chopsticks.html";
     });
 };
