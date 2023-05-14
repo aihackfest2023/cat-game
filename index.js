@@ -88,12 +88,4 @@ window.onload = () => {
     document.querySelector("#send-button").addEventListener("click", async () => {
         await sendMessage();
     });
-
-    document.querySelector("#piano").addEventListener("click", () => {
-        location.href = "piano.html";
-    });
-
-    document.querySelector("#chopsticks").addEventListener("click", () => {
-        location.href = "chopsticks.html";
-    });
 };

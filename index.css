@@ -80,11 +80,19 @@ h1 {
     font-size: 14px;
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
 button {
-    border: none;
     cursor: pointer;
+    margin-right: 20px;
+}
+
+#send-button {
+    border: none;
     appearance: none;
-    background-color: inherit;
     width: 20px;
 }
 

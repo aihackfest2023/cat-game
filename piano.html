@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piano Cat</title>
-</head>
-<body>
-    <button onclick="location.href = 'index.html'">Back to Home</button>
-    <iframe src="http://143.198.193.11:5000/" width="90%" height="950px"></iframe>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Piano Cat</title>
+    </head>
+    <style>
+        body {
+            display: block;
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .icon {
+            object-fit: cover;
+            width: 40px;
+            height: 40px;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+    <body>
+        <div class="row">
+            <button onclick="location.href = 'index.html'"><img class="icon" src="Assets/caticon.png" />Back to Home</button>
+            <button onclick="location.href = 'chopsticks.html'"><img class="icon" src="Assets/chopsticksicon.png" />Play chopsticks</button>
+        </div>
+        <iframe src="http://143.198.193.11:5000/" width="90%" height="950px"></iframe>
+    </body>
 </html>

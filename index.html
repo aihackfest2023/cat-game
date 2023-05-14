@@ -9,17 +9,19 @@
     </head>
     <body>
         <h1>Talk to Kitty!</h1>
-        <img class="cat" src="Assets/gingercat.gif">
+        <img class="cat" src="Assets/gingercat.gif" />
         <!-- text input -->
         <div id="chat-container">
             <div id="chat-messages"></div>
             <div class="chat-input">
                 <!-- <input type="text" id="user-input" placeholder="Type your message..." /> -->
                 <p><span id="user-input" class="textarea" role="textbox" contenteditable></span></p>
-                <button id="send-button"><img class="icon" src="Assets/sendicon.png"></button>
+                <button id="send-button"><img class="icon" src="Assets/sendicon.png" /></button>
             </div>
         </div>
-        <button id="chopsticks">Play chopsticks</button>
-        <button id="piano">Play the piano</button>
+        <div class="row">
+            <button onclick="location.href = 'chopsticks.html'"><img class="icon" src="Assets/chopsticksicon.png" />Play chopsticks</button>
+            <button onclick="location.href = 'piano.html'"><img class="icon" src="Assets/pianoicon.png" />Play the piano</button>
+        </div>
     </body>
 </html>
