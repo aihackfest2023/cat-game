@@ -1,12 +1,13 @@
 const url = "https://api.twinword.com/api/emotion/analyze/latest/";
+const key = "bAksaLGV1Ze7U25FAtff7dIsHh+Ch81iqyZUTjSPXPfyvaUSweH480IqGKjEaeNq9Gmy08YZcqS0GZwz+8GBfA==";
 
 async function sendMessage() {
-    console.log("clicked on send");
     var userInput = document.getElementById("user-input");
     var userMessage = userInput.innerHTML;
 
     if (userMessage.trim() !== "") {
         var chatMessages = document.getElementById("chat-messages");
+        chatMessages.style = "overflow-y: scroll;";
 
         var userBubble = document.createElement("div");
         userBubble.classList.add("bubble");
@@ -58,9 +59,9 @@ async function queryGPT(userMessage) {
     const options = {
         method: "POST",
         headers: {
-            "content-type": "application/x-www-form-urlencoded",
-            "X-RapidAPI-Key": key,
-            "X-RapidAPI-Host": "twinword-emotion-analysis-v1.p.rapidapi.com",
+            "Content-Type": "application/x-www-form-urlencoded",
+            "X-Twaip-Key": key,
+            Host: "api.twinword.com",
         },
         body: new URLSearchParams({
             text: userMessage,
@@ -69,13 +70,14 @@ async function queryGPT(userMessage) {
 
     const response = await fetch(url, options);
     const result = await response.text();
+    console.log(result);
     const data = JSON.parse(result);
 
     // Extract emotion scores
-    const emotionScores = data.emotion_scores;
+    const highestEmotion = data.emotions_detected[0] == undefined ? "confusion" : data.emotions_detected[0];
 
     // Find the highest value
-    const highestEmotion = Object.keys(emotionScores).reduce((a, b) => (emotionScores[a] > emotionScores[b] ? a : b));
+    //const highestEmotion = Object.keys(emotionScores).reduce((a, b) => (emotionScores[a] > emotionScores[b] ? a : b));
 
     // Print the highest emotion
     console.log(highestEmotion);
