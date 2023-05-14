@@ -20,7 +20,8 @@ async function sendMessage() {
 
         // Call bot response function here
         try {
-            var emotion = await queryGPT(userMessage);
+            //var emotion = await queryGPT(userMessage);
+            var emotion = userMessage;
             console.log(emotion);
         } catch (error) {
             console.log("error: ", error);
