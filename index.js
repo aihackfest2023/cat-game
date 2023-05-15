@@ -1,5 +1,4 @@
 const url = "https://api.twinword.com/api/emotion/analyze/latest/";
-const key = "bAksaLGV1Ze7U25FAtff7dIsHh+Ch81iqyZUTjSPXPfyvaUSweH480IqGKjEaeNq9Gmy08YZcqS0GZwz+8GBfA==";
 
 async function sendMessage() {
     var userInput = document.getElementById("user-input");

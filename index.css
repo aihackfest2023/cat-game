@@ -97,6 +97,7 @@ button {
     border: none;
     appearance: none;
     width: 20px;
+    background-color: transparent;
 }
 
 .icon {
